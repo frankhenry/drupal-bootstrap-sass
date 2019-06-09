@@ -123,7 +123,7 @@ class ScriptHandler {
       }
     }
     // ... otherwise, default to 'dev'
-    if (!($env)) {
+    if (!$env) {
       $env = "dev";
     }
 
