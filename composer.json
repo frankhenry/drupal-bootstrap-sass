@@ -143,5 +143,10 @@
                 ".gitattributes": "../.gitattributes"
             }
         }
+        "merge-plugin": {
+            "include": [
+                "web/modules/contrib/webform/composer.libraries.json"
+            ]
+        },
     }
 }
