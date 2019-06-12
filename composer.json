@@ -147,6 +147,6 @@
             "include": [
                 "web/modules/contrib/webform/composer.libraries.json"
             ]
-        },
+        }
     }
 }
