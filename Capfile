@@ -3,10 +3,6 @@ require "capistrano/setup"
 
 require "capistrano/deploy"
 
-# First deployment will fail if linked files (specifically, settings.php for Drupal sites) do not exist, but the file is only
-# created after deployment. This gem allows this problem to be overcome. See https://github.com/rjocoleman/capistrano-touch-linked-files.
-require "capistrano/touch-linked-files"
-
 # Load the SCM plugin appropriate to your project:
 #
 # require "capistrano/scm/hg"
