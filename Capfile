@@ -36,7 +36,6 @@ require "capistrano/drupal-deploy"
 #
 # require "capistrano/rbenv"
 # require "capistrano/chruby"
-require "capistrano/bundler"
 # require "capistrano/rails/migrations"
 # require "capistrano/passenger"
 
