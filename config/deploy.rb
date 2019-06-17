@@ -26,9 +26,6 @@ set :format_options, command_output: true, log_file: "log/capistrano.log", color
 # Default value for :pty is false
 # set :pty, true
 
-# Default value for :linked_files is []
-set :linked_files, fetch(:linked_files, []).push("#{fetch(:app_path)}/sites/default/settings.php")
-
 # Default value for linked_dirs is []
 set :linked_dirs, fetch(:linked_dirs, []).push("#{fetch(:app_path)}/sites/default/files", "private-files")
 
