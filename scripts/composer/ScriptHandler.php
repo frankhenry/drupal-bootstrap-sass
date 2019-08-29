@@ -112,18 +112,21 @@ class ScriptHandler {
    */
   public static function customSettingsFiles(Event $event) {
 
-    // If an environment argument is specified when the script is invoked, use it...
     $args = $event->getArguments();
     if (count($args) > 0) {
       foreach ($args as $arg) {
         if (preg_match('/^--env=(.*)$/', $arg, $matches)) {
+          print "Showing matches array\n";
+          var_dump($matches);
           $env = $matches[1];
-          break;
         }
       }
     }
-    // ... otherwise, default to 'dev'
-    if (!isset($env)) {
+
+    if (isset($env)) {
+      print "Yo, the environment is $env\n";
+    } else {
+      print "Yo, no environment specified\n";
       $env = "dev";
     }
 
