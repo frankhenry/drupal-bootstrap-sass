@@ -1,6 +1,6 @@
 {
-    "name": "frank-communication/website",
-    "description": "Project template for Frank Communication website",
+    "name": "frankhenry/d8-bootstrap-sass",
+    "description": "Project template for Drupal 8 website including custom Bootstrap Sass subtheme",
     "type": "project",
     "license": "GPL-2.0-or-later",
     "authors": [
@@ -13,6 +13,10 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/frankhenry/fc-bootstrap"
         }
     ],
     "require": {
@@ -26,7 +30,7 @@
         "drupal/advagg": "^3.5",
         "drupal/advanced_text_formatter": "1.0-beta3",
         "drupal/better_exposed_filters": "^3.0@alpha",
-        "drupal/bootstrap": "^3.17",
+        "drupal/bootstrap": "^3.18",
         "drupal/captcha": "1.0-beta1",
         "drupal/ckeditor_entity_link": "1.0-alpha2",
         "drupal/config_filter": "1.2",
@@ -87,7 +91,8 @@
         "vlucas/phpdotenv": "^2.4",
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
-        "zaporylie/composer-drupal-optimizations": "^1.0"
+        "zaporylie/composer-drupal-optimizations": "^1.0",
+        "frankhenry/fc-bootstrap": "dev-master@dev"
     },
     "require-dev": {
         "drupal/devel": "1.2",
@@ -115,13 +120,13 @@
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
         "post-install-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::customSettingsFiles"
+            "DrupalProject\\composer\\SettingsHandler::customSettingsFiles"
         ],
         "post-update-cmd": [
-            "DrupalProject\\composer\\ScriptHandler::customSettingsFiles"
+            "DrupalProject\\composer\\SettingsHandler::customSettingsFiles"
         ],
         "copy-settings": [
-            "DrupalProject\\composer\\ScriptHandler::customSettingsFiles"
+            "DrupalProject\\composer\\SettingsHandler::customSettingsFiles"
         ]
     },
     "extra": {
@@ -135,6 +140,7 @@
             "web/modules/contrib/{$name}": ["type:drupal-module"],
             "web/profiles/contrib/{$name}": ["type:drupal-profile"],
             "web/themes/contrib/{$name}": ["type:drupal-theme"],
+            "web/themes/custom/{$name}": ["type:drupal-custom-theme"],
             "drush/Commands/{$name}": ["type:drupal-drush"]
         },
         "drupal-scaffold": {
