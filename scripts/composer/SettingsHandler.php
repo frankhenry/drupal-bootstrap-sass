@@ -2,10 +2,10 @@
 
 /**
  * @file
- * Contains \DrupalProject\composer\SettingsHandler.
+ * Contains \FrankHenry\composer\SettingsHandler.
  */
 
-namespace DrupalProject\composer;
+namespace FrankHenry\composer;
 
 use Composer\Script\Event;
 use Composer\Semver\Comparator;

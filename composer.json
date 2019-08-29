@@ -108,7 +108,8 @@
     },
     "autoload": {
         "classmap": [
-            "scripts/composer/ScriptHandler.php"
+            "scripts/composer/ScriptHandler.php",
+            "scripts/composer/SettingsHandler.php"
         ],
         "files": ["load.environment.php"]
     },
@@ -120,13 +121,13 @@
             "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
         ],
         "post-install-cmd": [
-            "DrupalProject\\composer\\SettingsHandler::customSettingsFiles"
+            "FrankHenry\\composer\\SettingsHandler::customSettingsFiles"
         ],
         "post-update-cmd": [
-            "DrupalProject\\composer\\SettingsHandler::customSettingsFiles"
+            "FrankHenry\\composer\\SettingsHandler::customSettingsFiles"
         ],
         "copy-settings": [
-            "DrupalProject\\composer\\SettingsHandler::customSettingsFiles"
+            "FrankHenry\\composer\\SettingsHandler::customSettingsFiles"
         ]
     },
     "extra": {
