@@ -30,7 +30,7 @@
         "drupal/advagg": "^3.5",
         "drupal/advanced_text_formatter": "1.0-beta3",
         "drupal/better_exposed_filters": "^3.0@alpha",
-        "drupal/bootstrap": "^3.18",
+        "drupal/bootstrap": "^3.20",
         "drupal/captcha": "1.0-beta1",
         "drupal/ckeditor_entity_link": "1.0-alpha2",
         "drupal/config_filter": "1.2",
