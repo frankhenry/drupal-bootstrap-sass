@@ -33,7 +33,7 @@ npm install --save-dev
 grunt deploy --target=dev
 ```
 
-At this point, you should be able to log in to the admin account and configure the site to use the custom theme and whatever modules you need. 
+At this point, you should be able to log in to the admin account and configure the site to use the custom theme (`/admin/appearance`), place blocks (`/admin/structure/blocks`), and install additional modules (`/admin/modules`). 
 
 
 If you want to add further modules to your installation, you can do so with `composer require ...`:
