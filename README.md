@@ -2,19 +2,39 @@
 
 This project template provides a [Composer](https://getcomposer.org/) starter kit for building a Drupal 8 website that includes a Bootstrap Sass subtheme and Font Awesome. The subtheme is in a separate project ([frankhenry/fc-bootstrap](https://github.com/frankhenry/fc-bootstrap)) that is included in the `composer.json` of this project template. The template also installs more modules than the standard template, and uses a different, but convenient, method of managing environment-specific settings files. Those differences aside, it's the same as the [officially supported drupal-composer/drupal-project](https://github.com/drupal-composer/drupal-project) project on GitHub. 
 
+## Prerequisites
+
+Before you start, there are four things you should do:
+
+1. Install `composer`. See [getcomposer.org](https://getcomposer.org/) for info.
+2. Install `node.js` and `npm` installed to use the Gruntfile. See [nodejs.org](https://nodejs.org/en/) and [npmjs.com/get-npm](https://www.npmjs.com/get-npm) for info.
+3. Create a database and a user, and give the user privileges on the database. See [drupal.org](https://www.drupal.org/docs/8/install/step-3-create-a-database) for info.
+4. Configure your web server to serve your site from the `web` subfolder of your project. For example, if your project is at `/var/www/myproject`, the web server root should be set to `/var/www/myproject/web`.
+
 ## Usage
 
-First you need to [install composer](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx).
-
-> Note: The instructions below refer to the [global composer installation](https://getcomposer.org/doc/00-intro.md#globally).
-You might need to replace `composer` with `php composer.phar` (or similar) 
-for your setup.
-
-After that you can create the project:
+First, create the project:
 
 ```
-composer create-project frankhenry/drupal-bootstrap-sass --repository='{"type":"git", "url":"git@bitbucket.org:fhenry99/drupal-bootstrap-sass.git"}' _sitename_ --no-interaction --stability=dev
+composer create-project frankhenry/d8-bootstrap-sass --repository='{"type":"git", "url":"https://github.com/frankhenry/d8-bootstrap-sass"}' _sitename_ --no-interaction --stability=dev
 ```
+
+Next, install the site:
+
+```
+drush site-install standard --db-url='mysql://[db_user]:[db_pass]@localhost/[db_name]' --site-name Example --account-pass=_password_
+```
+
+Then, install the `node.js` modules that will be required by Grunt and execute `grunt` to rebuild the site assets:
+
+```
+cd web/themes/custom/fc-bootstrap
+npm install --save-dev
+grunt deploy --target=dev
+```
+
+At this point, you should be able to log in to the admin account and configure the site to use the custom theme and whatever modules you need. 
+
 
 If you want to add further modules to your installation, you can do so with `composer require ...`:
 
