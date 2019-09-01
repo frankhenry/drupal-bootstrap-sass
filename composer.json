@@ -13,10 +13,6 @@
         {
             "type": "composer",
             "url": "https://packages.drupal.org/8"
-        },
-        {
-            "type": "vcs",
-            "url": "https://github.com/frankhenry/fc_bootstrap"
         }
     ],
     "require": {
@@ -92,7 +88,6 @@
         "webflo/drupal-finder": "^1.0.0",
         "webmozart/path-util": "^2.3",
         "zaporylie/composer-drupal-optimizations": "^1.0",
-        "frankhenry/fc_bootstrap": "dev-master@dev"
     },
     "require-dev": {
         "drupal/devel": "1.2",
