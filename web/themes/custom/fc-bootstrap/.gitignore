@@ -1,0 +1,3 @@
+# Ignore some theme components
+node_modules/
+.sass_cache/

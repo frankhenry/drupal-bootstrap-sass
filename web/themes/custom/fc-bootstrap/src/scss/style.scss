@@ -1,0 +1,17 @@
+// Default variables.
+@import "default-variables";
+
+// Bootstrap Framework.
+@import '../../bootstrap/assets/stylesheets/bootstrap';
+
+// Font Awesome main compile
+@import '../../assets/fontawesome/scss/fontawesome.scss';
+
+// Font Awesome solid icon styles
+@import '../../assets/fontawesome/scss/solid.scss';
+
+// Base-theme overrides.
+@import 'drupal-bootstrap';
+
+// Theme-specific overrides
+@import 'theme-overrides';

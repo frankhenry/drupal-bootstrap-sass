@@ -1,0 +1,25 @@
+framework:
+  css:
+    theme:
+      dist/css/drupal-bootstrap-cosmo.min.css: {}
+  js:
+    dist/js/bootstrap.min.js: {}
+
+fonts:
+  css:
+    dist/fonts/glyphicons-halflings-regular.woff: {}
+    dist/fonts/glyphicons-halflings-regular.woff2: {}
+    dist/fonts/fa-brands-400.woff: {}
+    dist/fonts/fa-brands-400.woff2: {}
+    dist/fonts/fa-regular-400.woff: {}
+    dist/fonts/fa-regular-400.woff2: {}
+    dist/fonts/fa-solid-900.woff: {}
+    dist/fonts/fa-solid-900.woff2: {}
+
+global-styling:
+  css:
+    theme:
+      dist/css/style.css: {}
+  js:
+    dist/js/theme.js: {}
+
