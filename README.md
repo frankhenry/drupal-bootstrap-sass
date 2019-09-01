@@ -21,6 +21,8 @@ First, create the project:
 composer create-project frankhenry/d8-bootstrap-sass --repository='{"type":"git", "url":"https://github.com/frankhenry/d8-bootstrap-sass"}' _sitename_ --no-interaction --stability=dev
 ```
 
+This command will create a `settings` folder in the root of your project. Edit these files to reflect the database and other settings for your environments. At a minimum, edit `dev.settings.php` to reflect the details of your development environment. See the section on *Settings Files* below for details.
+
 Next, install the site:
 
 ```
@@ -92,7 +94,7 @@ The file `scripts/composer` folder includes `ScriptHandler.php`, which defines a
 
 As with any Drupal setup, you'll need to create your database and add the details to the settings file. You'll also need to add a hash salt. I don't believe there is any issue with using the same value for all environments, so the setting is in `shared.settings.php`:
 
-`$settings['hash_salt'] = '';
+`$settings['hash_salt'] = '';`
 
 Use this command to generate a hash salt for your site:
 
