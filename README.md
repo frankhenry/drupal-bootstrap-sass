@@ -1,6 +1,8 @@
 # Template for Drupal 8 projects including a Bootstrap Sass subtheme
 
-This project template provides a [Composer](https://getcomposer.org/) starter kit for building a Drupal 8 website that includes a Bootstrap Sass subtheme and Font Awesome. The subtheme is in a separate project ([frankhenry/fc-bootstrap](https://github.com/frankhenry/fc-bootstrap)) that is included in the `composer.json` of this project template. The template also installs more modules than the standard template, and uses a different, but convenient, method of managing environment-specific settings files. Those differences aside, it's the same as the [officially supported drupal-composer/drupal-project](https://github.com/drupal-composer/drupal-project) project on GitHub. 
+This project template provides a [Composer](https://getcomposer.org/) starter kit for building a Drupal 8 website that includes a Bootstrap Sass subtheme and Font Awesome. The template also installs more modules than the standard template, and uses a different, but convenient, method of managing environment-specific settings files. Those differences aside, it's the same as the [officially supported drupal-composer/drupal-project](https://github.com/drupal-composer/drupal-project) project on GitHub. 
+
+The subtheme is also available as a separate project - see [frankhenry/fc-bootstrap](https://github.com/frankhenry/fc-bootstrap).
 
 ## Prerequisites
 
@@ -33,8 +35,7 @@ npm install --save-dev
 grunt deploy --target=dev
 ```
 
-At this point, you should be able to log in to the admin account and configure the site to use the custom theme (`/admin/appearance`), place blocks (`/admin/structure/blocks`), and install additional modules (`/admin/modules`). 
-
+At this point, you should be able to log in to the admin account and configure the site to use the custom theme (`/admin/appearance`), place blocks (`/admin/structure/blocks`), and install additional modules (`/admin/modules`). After installation, the theme will be functional but you will need to modify it to suit your requirements. 
 
 If you want to add further modules to your installation, you can do so with `composer require ...`:
 
