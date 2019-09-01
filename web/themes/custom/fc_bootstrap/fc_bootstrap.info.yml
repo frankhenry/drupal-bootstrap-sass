@@ -23,7 +23,7 @@ regions:
 
 libraries-extend:
   bootstrap/framework:
-    - fc-bootstrap/framework
+    - fc_bootstrap/framework
 
 libraries:
-  - fc-bootstrap/global-styling
+  - fc_bootstrap/global-styling
